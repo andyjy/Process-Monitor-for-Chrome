@@ -1,0 +1,116 @@
+body {
+  overflow: hidden;
+  margin: 0 0 35px;
+  padding: 5px;
+  background: #f6f6f6;
+  color: #333;
+  font-family: sans-serif;
+}
+
+table {
+  border: none;
+  border-spacing: 0;
+  table-layout: fixed;
+}
+
+div, td, th {
+  padding: 1px 3px;
+  font-size: 10pt;
+  margin-top: 1px;
+  overflow: hidden;
+  text-align: left;
+  white-space: nowrap;
+}
+
+#controls {
+  padding-bottom: 6px;
+}
+
+th {
+  border-bottom: 1px solid #ccc;
+  padding: 5px 3px;
+}
+th.cpu {
+  width: 2.5em;
+}
+th.memory {
+  width: 4.5em;
+}
+th.actions {
+  width: 14em;
+  text-align: center;
+}
+th.process {
+  text-align: left;
+  padding-left: 24px;
+}
+
+#process_list {
+  height: 280px;
+  width: 700px;
+  overflow-y: scroll;
+  background: white;
+}
+
+#process_list img {
+  vertical-align: bottom;
+  padding-right: 5px;
+}
+
+th.cpu, td.cpu, th.memory, td.memory {
+  text-align: right;
+}
+td.memory, th.memory {
+  padding-right: 10px;
+}
+td.process {
+  overflow: hidden;
+}
+td.actions {
+  text-align: right;
+}
+
+tr:nth-child(even) {
+  background-color: #F0F8FF;
+}
+
+tr.warn {
+  background-color: #FCC;
+}
+
+tr.selected {
+  background-color: #C6E2FF;
+}
+
+canvas#cpu_graph {
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-width: 1px 0;
+}
+
+footer {
+  color: gray;
+  font-size: 11px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 5px;
+  text-align: center;
+}
+
+#paused_msg {
+  position: absolute;
+  top: 7px;
+  left: 50%;
+  background-color: #fcf8e3;
+  border: 1px dotted #c09853;
+  border-radius: 3px;
+  padding: 3px;
+  font-size: 11px;
+  width: 27em;
+  margin-left: -12em;
+  display: none;
+  color: #c09853;
+  text-align: center;
+}

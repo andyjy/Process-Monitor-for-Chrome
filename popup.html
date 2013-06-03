@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <script src="popup.js"></script>
+    <link rel="stylesheet" type="text/css" href="popup.css">
+  </head>
+  <body>
+    <div id="controls">
+      Sort by:
+      <select id="sort">
+        <option value="cpu">CPU usage</option>
+        <option value="memory">Memory usage</option>
+      </select>
+    </div>
+    <div id="process_list">
+      <table style="width: 100%;">
+        <thead>
+          <tr>
+            <th class="cpu">CPU</th>
+            <th class="memory">Memory</th>
+            <th class="process">Process</th>
+            <th class="actions">Actions</th>
+          </tr>
+        </thead>
+        <tbody id="process_list_body">
+          <tr>
+            <td colspan="4">
+              <i>Loading...</i>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="graphs">
+      <canvas id="cpu_graph" width="700" height="100"></canvas>
+    </div>
+    <footer>
+      Process monitor for Chrome by <a href="http://twitter.com/andyy" target="_blank">@andyy</a><br>
+      Memory shows usage private to each process, excluding shared memory. CPU usage above 100% is possible with multiple CPU cores.
+    </footer>
+    <div id="paused_msg">
+      <span>Auto-refresh paused - move your mouse away to resume</span>
+    </div>
+  </body>
+</html>
