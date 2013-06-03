@@ -26,24 +26,25 @@ _A detailed popup with list of all processes sorted by CPU or memory usage, hist
 Installation Instructions
 =========================
 
-This extension utilises some [experimental Chrome APIs](http://developer.chrome.com/extensions/experimental.processes.html) for accessing and managing processes. Unfortunately this means it can't (yet) be distributed through the Chrome Web Store - you need to install in manually. Luckily this is not difficult and only takes a minute:
+The extension utilises some [experimental Chrome APIs](http://developer.chrome.com/extensions/experimental.processes.html) for accessing and managing processes. Unfortunately this means it can't (yet) be distributed through the Chrome Web Store - you need to install it manually. Luckily, this is not difficult - and only takes a minute:
 
 1. Enable the experimental APIs
-    a. Start Google Chrome
-    b. Open up [chrome://flags](chrome://flags)
-    c. Search for "Experimental Extension APIs" and enable
-    d. Relaunch Chrome for this to take effect (use the Relaunch button that appears at the bottom of the screen and all your open tabs will be preserved)
+    1. Start Google Chrome
+    2. Open up <a href="chrome://flags" target="_blank">chrome://flags</a> (copy and paste into a new tab)
+    3. Search for "Experimental Extension APIs" and enable
+    4. Relaunch Chrome for this to take effect (use the Relaunch button that appears at the bottom of the screen and all your open tabs will be preserved)
 
 2. Install the extension
-    a. [Download the source (.zip)]([http://cl.ly/PMOY]) and unzip.
-    b. Open [chrome://extensions/](chrome://extensions/) or select Tools > Extensions
-    c. Ensure the "Developer mode" box at the top of the page is ticked, and click the "Load unpacked extension.." button
-    d. Browse to select the folder containing the files you've just downloaded and unzipped
-    e. And you're done! The extension should appear in your address bar. Keep an eye on it to monitor your CPU usage, and click for further details at any time.
+    1. [Download the source (.zip)](http://cl.ly/PMOY) and unzip.
+    2. Open <a href="chrome://extensions" target="_blank">chrome://extensions/</a> (copy and paste into a new tab) or select Tools > Extensions from the Chrome menu
+    3. Ensure the "Developer mode" box at the top of the page is ticked, and click the "Load unpacked extension.." button
+    4. Browse to select the folder containing the files you've just downloaded and unzipped
+    5. And you're done! The extension should appear in your address bar. Keep an eye on it to monitor your CPU usage, and click for further details at any time.
 
 
 Credits
 =======
 
 Created by me, [@andyy](http://twitter.com/andyy)
+
 Code at [https://github.com/andyyoung/Process-Monitor-for-Chrome](https://github.com/andyyoung/Process-Monitor-for-Chrome)
