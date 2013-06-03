@@ -48,4 +48,6 @@ Credits
 
 Created by me, [@andyy](http://twitter.com/andyy)
 
+Licence: MIT
+
 Code at [https://github.com/andyyoung/Process-Monitor-for-Chrome](https://github.com/andyyoung/Process-Monitor-for-Chrome)
