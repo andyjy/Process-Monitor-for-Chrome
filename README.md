@@ -36,11 +36,12 @@ The extension utilises some [experimental Chrome APIs](http://developer.chrome.c
 
 2. Install the extension
     1. [Download the source (.zip)](http://cl.ly/PMOY) and unzip.
-    2. Open <a href="chrome://extensions" target="_blank">chrome://extensions/</a> (copy and paste into a new tab) or select Tools > Extensions from the Chrome menu
-    3. Ensure the "Developer mode" box at the top of the page is ticked, and click the "Load unpacked extension.." button
+    2. Open <a href="chrome://extensions" target="_blank">chrome://extensions</a> (copy and paste into a new tab) or select Tools > Extensions from the Chrome menu
+    3. Ensure the "Developer mode" box at the top of the page is ticked, and click the "Load unpacked extension.." button (see screenshot below)
     4. Browse to select the folder containing the files you've just downloaded and unzipped
-    5. And you're done! The extension should appear in your address bar. Keep an eye on it to monitor your CPU usage, and click for further details at any time.
+    5. And you're done! The extension will appear in your address bar. Keep an eye on it to monitor your CPU usage, and click for further details at any time.
 
+![Step 3 - installing an extension manually](http://f.cl.ly/items/2Q2G3y3k232s3z1S1p0c/Screen%20Shot%202013-06-03%20at%2003.33.45.png)
 
 Credits
 =======
