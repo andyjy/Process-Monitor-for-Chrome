@@ -6,7 +6,7 @@ var sort = 'cpu';
 
 function init() {
   var bg = background_page_window = chrome.extension.getBackgroundPage();
-  chrome.experimental.processes.onUpdatedWithMemory.addListener(receiveProcessInfo);
+  chrome.processes.onUpdatedWithMemory.addListener(receiveProcessInfo);
   cpu_graph_draw_context = document.getElementById('cpu_graph').getContext('2d');
   var tbody = document.getElementById("process_list_body");
   var msg = document.getElementById('paused_msg');
@@ -126,7 +126,7 @@ function select_process(e) {
 }
 
 function terminate(e) {
-  chrome.experimental.processes.terminate(+this.parentNode.parentNode.dataset.pid, function(result) {
+  chrome.processes.terminate(+this.parentNode.parentNode.dataset.pid, function(result) {
     if (!result) {
       alert('Sorry, this process could not be terminated.');
     }

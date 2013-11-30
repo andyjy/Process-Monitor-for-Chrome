@@ -4,7 +4,7 @@
   "version": "1",
   "description": "Monitor Chrome's CPU and memory usage, drill down to identify misbehaving processes and take action.",
   "permissions": [
-    "experimental",
+    "processes",
     "tabs"
   ],
   "browser_action": {

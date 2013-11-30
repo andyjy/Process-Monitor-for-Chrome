@@ -5,7 +5,7 @@ var done_init = false;
 function init() {
   if (done_init) { return; }
   done_init = true;
-  chrome.experimental.processes.onUpdatedWithMemory.addListener(receiveProcessInfo);
+  chrome.processes.onUpdatedWithMemory.addListener(receiveProcessInfo);
   icon_draw_context = document.getElementById('canvas').getContext('2d');
   icon_draw_context.fillStyle = '#f6f6f6';
   icon_draw_context.fillRect(0, 0, 19, 19);
