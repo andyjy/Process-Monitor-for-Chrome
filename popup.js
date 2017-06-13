@@ -6,6 +6,7 @@ var sort = 'cpu';
 
 function init() {
   var bg = background_page_window = chrome.extension.getBackgroundPage();
+  chrome.processes.onUpdatedWithMemory.addListener(console.log);
   chrome.processes.onUpdatedWithMemory.addListener(receiveProcessInfo);
   cpu_graph_draw_context = document.getElementById('cpu_graph').getContext('2d');
   var tbody = document.getElementById("process_list_body");
@@ -65,9 +66,10 @@ function getTabInfo(tab) {
 function displayProcessInfo(process) {
   var row_html = '';
   var memory = (process.privateMemory / 1024 / 1024).toFixed(0) + " Mb";
-  var tab = process.tabs
-  if (tab.length) {
-    chrome.tabs.get(tab[0], getTabInfo);
+  var tab = process.tasks[0];
+  var tabId = tab.tabId;
+  if (tabId) {
+    chrome.tabs.get(tabId, getTabInfo);
     process.type = 'Tab';
   } else {
     if (process.type == 'renderer') {
@@ -81,10 +83,10 @@ function displayProcessInfo(process) {
   if (process.id == current_graph) {
     row_class += ' selected';
   }
-  row_html += '<tr class="' + row_class + '" data-tabid="' + (tab.length ? tab[0] : '') + '" data-pid="' + process.id + '">' +
+  row_html += '<tr class="' + row_class + '" data-tabid="' + (tab.tabId || '') + '" data-pid="' + process.id + '">' +
     '<td class="cpu">' + Math.floor(process.cpu) + '%</td>' +
     '<td class="memory">' + memory + '</td>' +
-    '<td class="process"><img width="16" height="16" id="tabIcon' + tab + '" style="visibility: hidden;">' + ucfirst(process.type) + '<span id="tabTitle' + tab + '"></span></td>' +
+    '<td class="process"><img width="16" height="16" id="tabIcon' + tab.tabId + '" style="visibility: hidden;">' + ucfirst(process.type) + '<span id="tabTitle' + tab.tabId + '"></span></td>' +
     '<td class="actions">';
   if (process.type == 'Tab') {
     row_html += '<button class="reload">Reload</button><button class="close">Close</button>';
