@@ -6,7 +6,6 @@ var sort = 'cpu';
 
 function init() {
   var bg = background_page_window = chrome.extension.getBackgroundPage();
-  chrome.processes.onUpdatedWithMemory.addListener(console.log);
   chrome.processes.onUpdatedWithMemory.addListener(receiveProcessInfo);
   cpu_graph_draw_context = document.getElementById('cpu_graph').getContext('2d');
   var tbody = document.getElementById("process_list_body");
